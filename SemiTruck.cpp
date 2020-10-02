@@ -2,26 +2,15 @@
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n) {}
 
-void SemiTruck::lanesplitAndRace( int topSpeed )
+void SemiTruck::driveSlow ( int slowSpeed )
 {
-    setSpeed(topSpeed);
-    std::cout << name << (topSpeed > 90 ? ": yeeehawwww" : ": zzzzzzzz") << std::endl;
+    setSpeed( slowSpeed );
+    std::cout << name << " is driving slow" << std::endl;
 }
-void SemiTruck::tryToEvade()
+void SemiTruck::pullOver()
 {
-    std::cout << name << ": you'll never take me alive, ya dirty coppers!" << std::endl;
-    setSpeed(120);
+    std::cout << name << " pulled over." << std::endl;
+    setSpeed(0);
 }
 
-void SemiTruck::setSpeed(int s)
-{
-    if( s < 90 )
-    {
-        //ignore the request to lower the speed
-        std::cout<< name << ": uh, no.  i'm currently lane-splitting and racing" << std::endl;
-    }
-    else
-    {
-        Vehicle::setSpeed(s);
-    }
-}
+

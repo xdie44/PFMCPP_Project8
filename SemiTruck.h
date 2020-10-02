@@ -9,9 +9,8 @@ struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& n);
     
-    void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );
+    void driveSlow ( int slowSpeed );
     
-    void tryToEvade() override;
+    void pullOver();
 
-    void setSpeed(int s) override;
 };

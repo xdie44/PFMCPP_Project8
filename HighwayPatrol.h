@@ -2,6 +2,9 @@
 
 #include "Vehicle.h"
 
+struct Highway;
+struct Vehicle;
+
 struct HighwayPatrol : Vehicle 
 {
     HighwayPatrol();
