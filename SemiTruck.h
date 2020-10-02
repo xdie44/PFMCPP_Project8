@@ -8,6 +8,9 @@
 struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& n);
+    virtual ~SemiTruck() = default;
+    SemiTruck(const SemiTruck&) = default;
+    SemiTruck& operator=(const SemiTruck&) = default;
     
     void driveSlow ( int slowSpeed );
     
