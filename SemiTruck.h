@@ -8,7 +8,7 @@
 struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& n);
-    virtual ~SemiTruck() = default;
+    ~SemiTruck() override;
     SemiTruck(const SemiTruck&) = default;
     SemiTruck& operator=(const SemiTruck&) = default;
     

@@ -8,7 +8,7 @@
 struct Motorcycle : public Vehicle
 {
     Motorcycle(const std::string& n);
-    virtual ~Motorcycle() = default;
+    ~Motorcycle() override;
     Motorcycle(const Motorcycle&) = default;
     Motorcycle& operator=(const Motorcycle&) = default;
     

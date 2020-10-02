@@ -1,6 +1,7 @@
 #include "SemiTruck.h"
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n) {}
+SemiTruck::~SemiTruck() = default;
 
 void SemiTruck::driveSlow ( int slowSpeed )
 {

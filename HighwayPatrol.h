@@ -8,7 +8,7 @@ struct Vehicle;
 struct HighwayPatrol : Vehicle 
 {
     HighwayPatrol();
-    virtual ~HighwayPatrol() = default;
+    ~HighwayPatrol() override;
     HighwayPatrol(const HighwayPatrol&) = default;
     HighwayPatrol& operator=(const HighwayPatrol&) = default;
 
