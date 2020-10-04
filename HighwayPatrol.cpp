@@ -11,6 +11,8 @@ HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
 }
 
 HighwayPatrol::~HighwayPatrol() = default;
+HighwayPatrol::HighwayPatrol(const HighwayPatrol&) = default;
+HighwayPatrol& HighwayPatrol::operator=(const HighwayPatrol&) = default;
 
 void HighwayPatrol::scanHighway(Highway* h)
 {
@@ -37,11 +39,11 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
         {
             vehicleType = "CAR";
         }
-        if (dynamic_cast<Motorcycle*>(v))
+        else if (dynamic_cast<Motorcycle*>(v))
         {
             vehicleType = "MOTORCYCLE";
         }
-        if (dynamic_cast<SemiTruck*>(v))
+        else if (dynamic_cast<SemiTruck*>(v))
         {
             vehicleType = "SEMITRUCK";
         }

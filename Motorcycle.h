@@ -9,8 +9,8 @@ struct Motorcycle : public Vehicle
 {
     Motorcycle(const std::string& n);
     ~Motorcycle() override;
-    Motorcycle(const Motorcycle&) = default;
-    Motorcycle& operator=(const Motorcycle&) = default;
+    Motorcycle(const Motorcycle&);
+    Motorcycle& operator=(const Motorcycle&);
     
     void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );
     
